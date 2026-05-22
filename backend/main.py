@@ -19,6 +19,9 @@ from agents.speech_ai_agent import fetch_speech_ai_news
 from agents.recommendation_systems_agent import fetch_recommendation_systems_news
 from agents.time_series_agent import fetch_time_series_news
 from agents.anomaly_detection_agent import fetch_anomaly_detection_news
+from agents.cloud_agent import fetch_cloud_news
+from agents.api_agent import fetch_api_news
+from agents.computing_agent import fetch_computing_news
 
 AGENT_RUNNERS = [
     ("Machine Learning", fetch_machine_learning_news),
@@ -40,7 +43,10 @@ AGENT_RUNNERS = [
     ("Speech AI", fetch_speech_ai_news),
     ("Recommendation Systems", fetch_recommendation_systems_news),
     ("Time Series Forecasting", fetch_time_series_news),
-    ("Anomaly Detection", fetch_anomaly_detection_news)
+    ("Anomaly Detection", fetch_anomaly_detection_news),
+    ("Cloud Agent", fetch_cloud_news),
+    ("API Agent", fetch_api_news),
+    ("Computing Agent", fetch_computing_news)
 ]
 
 def run_all_agents():

@@ -2,7 +2,8 @@ import React from 'react';
 import CategoryCard from '../components/CategoryCard';
 import { 
   Brain, Network, Sparkles, MessageSquare, Eye, Cpu, Bot, Award, Database, 
-  Workflow, GitBranch, BarChart2, Layers, Zap, Terminal, ShieldCheck, Mic, ThumbsUp, TrendingUp, AlertTriangle 
+  Workflow, GitBranch, BarChart2, Layers, Zap, Terminal, ShieldCheck, Mic, ThumbsUp, TrendingUp, AlertTriangle,
+  Cloud, Code2, Server
 } from 'lucide-react';
 import './Explore.css';
 
@@ -126,6 +127,24 @@ const categories = [
     path: '/anomaly_detection', 
     icon: AlertTriangle, 
     desc: 'Outlier detection, security intelligence, fraud modeling, and diagnostic health.' 
+  },
+  { 
+    name: 'Cloud Agent', 
+    path: '/cloud_agent', 
+    icon: Cloud, 
+    desc: 'Cloud infrastructure, serverless, AWS, Azure, GCP, and AI cloud services.' 
+  },
+  { 
+    name: 'API Agent', 
+    path: '/api_agent', 
+    icon: Code2, 
+    desc: 'AI API services, integration, RESTful endpoints, and developer tooling.' 
+  },
+  { 
+    name: 'Computing Agent', 
+    path: '/computing_agent', 
+    icon: Server, 
+    desc: 'High-performance computing, GPUs, TPUs, quantum hardware, and AI processors.' 
   }
 ];
 

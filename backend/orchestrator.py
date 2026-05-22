@@ -23,6 +23,9 @@ from agents.speech_ai_agent import fetch_speech_ai_news
 from agents.recommendation_systems_agent import fetch_recommendation_systems_news
 from agents.time_series_agent import fetch_time_series_news
 from agents.anomaly_detection_agent import fetch_anomaly_detection_news
+from agents.cloud_agent import fetch_cloud_news
+from agents.api_agent import fetch_api_news
+from agents.computing_agent import fetch_computing_news
 
 # Define mappings for dynamic node construction
 AGENT_FUNCTIONS = {
@@ -45,10 +48,13 @@ AGENT_FUNCTIONS = {
     "speech_ai": fetch_speech_ai_news,
     "recommendation_systems": fetch_recommendation_systems_news,
     "time_series": fetch_time_series_news,
-    "anomaly_detection": fetch_anomaly_detection_news
+    "anomaly_detection": fetch_anomaly_detection_news,
+    "cloud_agent": fetch_cloud_news,
+    "api_agent": fetch_api_news,
+    "computing_agent": fetch_computing_news
 }
 
-# 1. Define the Shared State covering all 20 AI categories
+# 1. Define the Shared State covering all AI categories
 class NewsState(TypedDict):
     machine_learning: str
     deep_learning: str
@@ -70,6 +76,9 @@ class NewsState(TypedDict):
     recommendation_systems: str
     time_series: str
     anomaly_detection: str
+    cloud_agent: str
+    api_agent: str
+    computing_agent: str
     last_updated: str
 
 # 2. Define Node Generator Function calling imports
